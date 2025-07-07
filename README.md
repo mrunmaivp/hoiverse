@@ -2,3 +2,7 @@
 
 When humans and robotic agents coexist in an environment, scene understanding becomes crucial for the agents to carry out various downstream tasks like navigation and planning. Hence, an agent must be capable of localizing and identifying actions performed by the human. Current research lacks reliable datasets for performing scene understanding within indoor environments where humans are also a part of the scene.
 Scene Graphs enable us to generate a structured representation of a scene or an image to perform visual scene understanding. To tackle this, we present HOIverse a synthetic dataset at the intersection of scene graph and human-object interaction, consisting of accurate and dense relationship ground truths between humans and surrounding objects along with corresponding RGB images, segmentation masks, depth images and human keypoints. We compute parametric relations between various pairs of objects and human-object pairs, resulting in an accurate and unambiguous relation definitions. In addition, we benchmark our dataset on state-of-the-art scene graph generation models to predict parametric relations and human-object interactions. Through this dataset, we aim to accelerate research in the field of scene understanding involving people.
+
+
+- 📄 [Paper (arXiv)](https://www.arxiv.org/abs/2506.19639)
+- 💻 [Code (GitHub)](https://github.com/mrunmaivp/hoiverse/)
