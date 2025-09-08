@@ -4,89 +4,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Mrunmai Phatak">
-  <meta name="description" content="Research paper on ...">
+  <meta name="description" content="Research paper on HOIverse: A Synthetic Scene Graph Dataset With Human Object Interactions">
   <title>HOIverse : A Synthetic Scene Graph Dataset With Human Object Interactions</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background-color: white;
       color: #333;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
+
     header {
-      background-color: #24292e;
-      color: white;
-      padding: 2rem 1rem;
+      background-color: white;
       text-align: center;
+      padding: 2rem 1rem;
     }
+
     header h1 {
-      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0d1b2a;
+      margin-bottom: 0.8rem;
     }
+
+    header p {
+      font-size: 1rem;
+      color: #444;
+      margin: 0.2rem 0;
+    }
+
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 2rem;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 0 1rem;
     }
-    h1, h2 {
-      color: #222;
+
+    h2 {
+      color: #0d1b2a;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+      font-size: 1.5rem;
     }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    ul li {
+      margin: 0.6rem 0;
+      font-size: 1.1rem;
+    }
+
     a {
       color: #0366d6;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     img {
+      display: block;
+      margin: 2rem auto 0.5rem auto;
       max-width: 100%;
       height: auto;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
+
+    .caption {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-top: 0;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #eee;
-      margin-top: 2rem;
+      background-color: #fafafa;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>HOIverse : A Synthetic Scene Graph Dataset With Human Object Interactions</h1>
-    <p>by Mrunmai Phatak, Julian Lorenz, Nico Hörmann, Jörg Hähner, Rainer Lienhart</p>
+    <h1>HOIverse: A Synthetic Scene Graph Dataset With Human Object Interactions</h1>
+    <p>Mrunmai Phatak · Julian Lorenz · Nico Hörmann · Jörg Hähner · Rainer Lienhart</p>
+    <p>University of Augsburg</p>
   </header>
+
   <main>
     <h2>Abstract</h2>
     <p>
-     When humans and robotic agents coexist in an environment, scene understanding becomes crucial for the agents to carry out various downstream tasks like navigation and planning. Hence, an agent must be capable of localizing and identifying actions performed by the human. Current research lacks reliable datasets for performing scene understanding within indoor environments where humans are also a part of the scene. Scene Graphs enable us to generate a structured representation of a scene or an image to perform visual scene understanding. To tackle this, we present HOIverse a synthetic dataset at the intersection of scene graph and human-object interaction, consisting of accurate and dense relationship ground truths between humans and surrounding objects along with corresponding RGB images, segmentation masks, depth images and human keypoints. We compute parametric relations between various pairs of objects and human-object pairs, resulting in an accurate and unambiguous relation definitions. In addition, we benchmark our dataset on state-of-the-art scene graph generation models to predict parametric relations and human-object interactions. Through this dataset, we aim to accelerate research in the field of scene understanding
+      When humans and robotic agents coexist in an environment, scene understanding becomes crucial for the agents to carry out various downstream tasks like navigation and planning. Hence, an agent must be capable of localizing and identifying actions performed by the human. Current research lacks reliable datasets for performing scene understanding within indoor environments where humans are also a part of the scene. Scene Graphs enable us to generate a structured representation of a scene or an image to perform visual scene understanding. 
+    </p>
+    <p>
+      To tackle this, we present <b>HOIverse</b>, a synthetic dataset at the intersection of scene graph and human-object interaction, consisting of accurate and dense relationship ground truths between humans and surrounding objects along with corresponding RGB images, segmentation masks, depth images and human keypoints. We compute parametric relations between various pairs of objects and human-object pairs, resulting in an accurate and unambiguous relation definitions. 
+    </p>
+    <p>
+      In addition, we benchmark our dataset on state-of-the-art scene graph generation models to predict parametric relations and human-object interactions. Through this dataset, we aim to accelerate research in the field of scene understanding.
     </p>
 
     <h2>Links</h2>
     <ul>
       <li><a href="https://www.arxiv.org/abs/2506.19639" target="_blank">📄 Read the paper on arXiv</a></li>
       <li><a href="https://github.com/mrunmaivp/hoiverse/" target="_blank">💻 View code on GitHub</a></li>
-      <li><a href="https://myweb.rz.uni-augsburg.de/~phatakmr/hoiverse/v1/" target="_blank"> Download HOIverse dataset</a></li>
+      <li><a href="https://myweb.rz.uni-augsburg.de/~phatakmr/hoiverse/v1/" target="_blank">⬇️ Download HOIverse dataset</a></li>
     </ul>
     
-    <img src="https://raw.githubusercontent.com/mrunmaivp/hoiverse/main/images/ground_truths.jpg" alt="ground_truth" style="width: 500px; height: auto; display: block; margin: auto;>
-    <p style="text-align: center; font-style: italic;">Ground truth data obtained from the scene generation and human insertion pipeline of the HOIverse dataset.</p>
+    <img src="https://raw.githubusercontent.com/mrunmaivp/hoiverse/main/images/ground_truths.jpg" alt="ground_truth">
+    <p class="caption">Ground truth data obtained from the scene generation and human insertion pipeline of the HOIverse dataset.</p>
 
-    <img src="https://raw.githubusercontent.com/mrunmaivp/hoiverse/main/images/smpl_sample_poses.png" alt="pose_examples" style="width: 400px; height: auto; display: block; margin: auto;>
-    <p style="text-align: center; font-style: italic;">Qualitative examples of supported relation types in
-HOIverse that involve humans.</p>
+    <img src="https://raw.githubusercontent.com/mrunmaivp/hoiverse/main/images/smpl_sample_poses.png" alt="pose_examples">
+    <p class="caption">Qualitative examples of supported relation types in HOIverse that involve humans.</p>
 
     <img src="https://raw.githubusercontent.com/mrunmaivp/hoiverse/main/images/hoi_relations.png" alt="param_relations">
-    <p style="text-align: center; font-style: italic;">Example annotations for looking at and body facing
-relations provided in HOIverse dataset..</p>
-    
+    <p class="caption">Example annotations for looking at and body facing relations provided in HOIverse dataset.</p>
   </main>
+
   <footer>
     &copy; 2025 Mrunmai Phatak
   </footer>
 </body>
 </html>
+
